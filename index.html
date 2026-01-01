@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Omicron</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0054FF">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0054FF;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo {
+      font-size: 64px;
+    }
+    .logo .o {
+      font-family: Montserrat, sans-serif;
+      font-weight: 600;
+    }
+    .logo .rest {
+      font-family: Comfortaa, sans-serif;
+      font-weight: 500;
+    }
+    .slogan {
+      margin-top: 10px;
+      font-family: Comfortaa, sans-serif;
+      font-size: 20px;
+    }
+    .contact {
+      position: fixed;
+      bottom: 16px;
+      left: 16px;
+      font-family: Comfortaa, sans-serif;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <span class="o">O</span><span class="rest">micron</span>
+  </div>
+  <div class="slogan">Powering tomorrow</div>
+
+  <div class="contact">
+    mynameisyenner@proton.com<br>
+    401&nbsp;230&nbsp;4423
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
