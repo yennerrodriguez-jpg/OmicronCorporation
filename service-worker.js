@@ -3,7 +3,6 @@ self.addEventListener('install', event => {
     caches.open('omicron-cache').then(cache => {
       return cache.addAll([
         './',
-        './index.html',
         './icon-192.png',
         './icon-512.png'
       ]);
