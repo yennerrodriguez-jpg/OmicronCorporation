@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Omicron — Powering tomorrow</title>
+  <title>Omicron — Powering Tomorrow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- PWA (same as original) -->
+  <!-- PWA -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#2563eb">
 
@@ -16,8 +16,12 @@
     :root {
       --blue: #2563eb;
       --blue-dark: #1e40af;
-      --text: #ffffff;
+      --text: #f8fafc;
       --muted: #c7d2fe;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -29,28 +33,29 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      font-family: Inter, system-ui, sans-serif;
+      text-align: center;
     }
 
     .logo {
       font-size: 64px;
+      font-weight: 700;
+      letter-spacing: -1px;
     }
 
     .logo .o {
-      font-family: Inter, sans-serif;
-      font-weight: 700;
       color: #ffffff;
     }
 
     .logo .rest {
+      color: var(--muted);
       font-family: "JetBrains Mono", monospace;
       font-weight: 500;
-      color: var(--muted);
     }
 
     .slogan {
-      margin-top: 10px;
-      font-family: Inter, sans-serif;
-      font-size: 20px;
+      margin-top: 14px;
+      font-size: 18px;
       color: #e0e7ff;
     }
   </style>
@@ -61,15 +66,17 @@
     <span class="o">O</span><span class="rest">micron</span>
   </div>
 
-  <div class="slogan">Powering tomorrow</div>
+  <div class="slogan">
+    Powering tomorrow
+  </div>
 
-  <!-- Service Worker (same logic as original) -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
     }
   </script>
 
 </body>
 </html>
-
