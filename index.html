@@ -1,1 +1,53 @@
-<html lang="en"><head>  <meta charset="UTF-8" />  <title>Omicron — Powering tomorrow</title>  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- PWA (same as original) -->  <link rel="manifest" href="manifest.json">  <meta name="theme-color" content="#2563eb">@@ -16,10 +16,14 @@    :root {      --blue: #2563eb;      --blue-dark: #1e40af;      --text: #ffffff;      --muted: #c7d2fe;    }    body {      margin: 0;      height: 100vh;@@ -29,28 +33,29 @@      flex-direction: column;      justify-content: center;      align-items: center;    }    .logo {      font-size: 64px;    }    .logo .o {      font-family: Inter, sans-serif;      font-weight: 700;      color: #ffffff;    }    .logo .rest {      font-family: "JetBrains Mono", monospace;      font-weight: 500;      color: var(--muted);    }    .slogan {      margin-top: 10px;      font-family: Inter, sans-serif;      font-size: 20px;      color: #e0e7ff;    }  </style>@@ -61,15 +66,17 @@    <span class="o">O</span><span class="rest">micron</span>  </div>  <div class="slogan">Powering tomorrow</div>  <!-- Service Worker (same logic as original) -->  <script>    if ('serviceWorker' in navigator) {      navigator.serviceWorker.register('service-worker.js');    }  </script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omicron</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2563eb; /* Your specified blue */
+            color: white;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-weight: 800; /* Extra-Bold */
+            font-size: 5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        p {
+            font-weight: 300; /* Light */
+            font-size: 1.5rem;
+            margin-top: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Omicron</h1>
+        <p>Powering Tomorrow</p>
+    </div>
+
+</body>
+</html>
