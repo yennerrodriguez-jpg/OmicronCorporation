@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omicron</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap" rel="stylesheet">
+    
     <style>
         body {
             margin: 0;
@@ -13,7 +18,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #2563eb; /* Your specified blue */
+            background-color: #2563eb;
             color: white;
             text-align: center;
             font-family: 'Montserrat', sans-serif;
@@ -28,17 +33,15 @@
             font-weight: 800; /* Extra-Bold */
             font-size: 5rem;
             margin: 0;
-            text-transform: uppercase;
-            letter-spacing: -2px;
+            /* Removed text-transform: uppercase */
         }
 
         p {
             font-weight: 300; /* Light */
             font-size: 1.5rem;
-            margin-top: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
+            margin-top: 5px;
             opacity: 0.9;
+            /* Removed text-transform: uppercase */
         }
     </style>
 </head>
@@ -49,5 +52,14 @@
         <p>Powering Tomorrow</p>
     </div>
 
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => console.log('Service Worker registered!', reg))
+                .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
+    </script>
 </body>
 </html>
