@@ -1,12 +1,21 @@
 {
-  "name": "Omicron",
+  "name": "Omicron Corporation",
   "short_name": "Omicron",
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#0054FF",
-  "theme_color": "#0054FF",
+  "background_color": "#2563eb",
+  "theme_color": "#2563eb",
+  "description": "Powering Tomorrow",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "https://via.placeholder.com/192/ffffff/2563eb?text=O",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://via.placeholder.com/512/ffffff/2563eb?text=Omicron",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ]
 }
